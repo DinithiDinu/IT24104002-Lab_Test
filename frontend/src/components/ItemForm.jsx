@@ -6,9 +6,9 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       name: "",
       category: "",
       price: "",
+      Discount_Percentage: "",
       description: "",
       imageUrl: "",
-      Discount_Percentage: "",
     }
   );
 
@@ -43,6 +43,14 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         onChange={handleChange}
         required
       />
+      <label>Discount_Percentage</label>
+      <input
+        type="number"
+        name="Discount"
+        value={formData.Discount_Percentage}
+        onChange={handleChange}
+        required
+      />
 
       <label>Description</label>
       <textarea
@@ -56,16 +64,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       <label>Image URL</label>
       <input name="imageUrl" value={formData.imageUrl} onChange={handleChange} />
 
-      <label>Discount_Percentage</label>
-      <input
-        type="number"
-        name="Discount"
-        value={formData.Discount_Percentage}
-        onChange={handleChange}
-        required
-      />
-
-   <button className="btn primary" type="submit">{submitText}</button>
+<button className="btn primary" type="submit">{submitText}</button>
 
     </form>
   );
