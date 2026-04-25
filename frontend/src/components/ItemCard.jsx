@@ -11,7 +11,10 @@ function ItemCard({ item, onDelete }) {
       <h3>{item.name}</h3>
       <p><strong>Category:</strong> {item.category}</p>
       <p><strong>Price:</strong> ${item.price}</p>
+      <p><strong>Discount_Percentage</strong></p>
       <p>{item.description}</p>
+
+
 
       <div className="card-actions">
         <Link className="btn secondary" to={`/edit-item/${item._id}`}>Edit</Link>
